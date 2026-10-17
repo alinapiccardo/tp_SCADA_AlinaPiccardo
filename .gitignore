@@ -1,0 +1,15 @@
+# Binarios compilados
+colector
+sensor
+consulta
+
+# Archivos objeto
+*.o
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos comprimidos temporales
+*.zip
+*.tar.gz

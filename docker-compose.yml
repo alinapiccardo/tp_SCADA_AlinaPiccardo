@@ -1,0 +1,17 @@
+services:
+  colector:
+    build: .
+    image: tp-scada
+    container_name: scada_colector
+    command: ./colector 3 500 4
+    # Compartir IPC del host para permitir que consulta o el cliente interactuen
+    ipc: host
+
+  consulta:
+    build: .
+    image: tp-scada
+    container_name: scada_consulta
+    command: sh -c "sleep 2 && ./consulta 1"
+    depends_on:
+      - colector
+    ipc: host
