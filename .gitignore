@@ -13,3 +13,7 @@ Thumbs.db
 # Archivos comprimidos temporales
 *.zip
 *.tar.gz
+
+# Documentos
+*.pdf
+
