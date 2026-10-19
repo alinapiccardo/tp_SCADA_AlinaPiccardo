@@ -245,7 +245,7 @@ int main(int argc, char *argv[]) {
          num_sensores);
 
   /* ---------------------------------------------------------------
-   * Enviar una "poisson pill" por cada worker.
+   * Enviar una "poison pill" por cada worker.
    * --------------------------------------------------------------- */
   pildora.sensor_id = ID_PILDORA_VENENO;
   pildora.valor = 0.0;
@@ -384,7 +384,7 @@ static void actualizar_estadisticas(memoria_compartida_t *shm,
 }
 
 /* Cuerpo de cada worker thread: consume mensajes de la cola en un
- * bucle infinito hasta recibir su poisson pill. */
+ * bucle infinito hasta recibir su poison pill. */
 static void *rutina_worker(void *arg) {
   args_worker_t *a;
   medicion_msg_t msg;

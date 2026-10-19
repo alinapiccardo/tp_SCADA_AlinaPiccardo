@@ -17,3 +17,6 @@ Thumbs.db
 # Documentos
 *.pdf
 
+#archivo historial
+HISTORIAL-IA.md
+
