@@ -27,9 +27,9 @@
 #define DEFAULT_NUM_WORKERS 4
 #define MAX_WORKERS 16
 
-#define MQ_NOMBRE "/mq_mediciones_ap3"
-#define SHM_NOMBRE "/shm_estadisticas_ap3"
-#define SEM_NOMBRE "/sem_estadisticas_ap3"
+#define MQ_NOMBRE "/mq_mediciones_scada"
+#define SHM_NOMBRE "/shm_estadisticas_scada"
+#define SEM_NOMBRE "/sem_estadisticas_scada"
 
 /* Identificador especial de sensor que el colector usa para armar las
  * "pildoras de veneno" (poison pills): un mensaje de control que le

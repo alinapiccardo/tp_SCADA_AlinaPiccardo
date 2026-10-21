@@ -121,7 +121,7 @@ Muestra una unica "foto" de las estadisticas actuales (por sensor y globales) y 
 Si se ejecuta `consulta` **sin** que haya un `colector` corriendo (o despues de que ya termino), falla con un mensaje explicativo, porque la memoria compartida ya no existe:
 
 ```
-No se pudo conectar a la memoria compartida (/shm_estadisticas_ap3). 
+No se pudo conectar a la memoria compartida (/shm_estadisticas_scada). 
 Verificar que el colector este corriendo.
 shm_open (consulta): No such file or directory
 ```
@@ -133,8 +133,8 @@ Esto es el comportamiento esperado: `consulta` demuestra que la memoria comparti
 Mientras el colector esta corriendo se puede ver, desde otra terminal, que los recursos realmente existen como archivos del sistema:
 
 ```bash
-ls -l /dev/shm/ | grep ap3
-ls -l /dev/mqueue/ | grep ap3
+ls -l /dev/shm/ | grep scada
+ls -l /dev/mqueue/ | grep scada
 ```
 
 Y una vez que el colector termina, esos archivos ya no estan (fueron liberados con `shm_unlink`/`mq_unlink`/`sem_unlink`).

@@ -29,9 +29,9 @@ clean:
 
 # Elimina recursos IPC que hayan quedado huerfanos si el colector se corto de forma abrupta (kill -9) antes de liberar sus recursos
 limpiar_ipc:
-	-rm -f /dev/shm/sem.sem_estadisticas_ap3
-	-rm -f /dev/shm/shm_estadisticas_ap3
-	-rm -f /dev/mqueue/mq_mediciones_ap3
+	-rm -f /dev/shm/sem.sem_estadisticas_scada
+	-rm -f /dev/shm/shm_estadisticas_scada
+	-rm -f /dev/mqueue/mq_mediciones_scada
 
 # Targets convenientes para Docker (necesario en macOS)
 docker-build:
