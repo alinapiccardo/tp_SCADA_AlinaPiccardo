@@ -3,9 +3,13 @@ services:
     build: .
     image: tp-scada
     container_name: scada_colector
-    command: ./colector 3 500 4
+    # 3 sensores, 500 mediciones c/u, 4 workers, reporte SIGALRM cada 2 s, umbral 90
+    command: ./colector 3 500 4 2 90
     # Compartir IPC del host para permitir que consulta o el cliente interactuen
     ipc: host
+    # Ctrl+C sobre "docker compose up" le manda SIGTERM al colector, que lo
+    # trata igual que SIGINT (apagado ordenado). Se le dan 20 s para drenar.
+    stop_grace_period: 20s
 
   consulta:
     build: .

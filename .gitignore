@@ -14,9 +14,14 @@ Thumbs.db
 *.zip
 *.tar.gz
 
-# Documentos
+# Documentos generados
 *.pdf
+*.docx
 
-#archivo historial
+# Archivos que genera el colector al correr
+monitoreo.log
+volcado_estadisticas.txt
+resumen_corridas.csv
+
+# Historial de trabajo con IA (solo local)
 HISTORIAL-IA.md
-
